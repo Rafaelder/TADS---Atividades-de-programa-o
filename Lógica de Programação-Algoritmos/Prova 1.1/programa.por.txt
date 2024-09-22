@@ -1,0 +1,33 @@
+programa 
+{
+	funcao inicio()
+	{
+		cadeia nome
+		inteiro pergunta, numAFavor = 0, numContra = 0
+		para(inteiro i = 1; i<= 10; i++){
+			escreva(" Digite seu nome: ")
+			leia(nome)
+			escreva("Você é a favor da greve?")
+			escreva("\n (Digite 1 pra sim e 2 pra não.)")
+			escreva(" : ")
+			leia(pergunta)
+			escreva("\n")
+			se(pergunta == 1){
+				numAFavor += 1
+			} senao se(pergunta == 2){
+				numContra += 1
+			} senao{
+				escreva("\n --- Voto Nulo --- \n\n")
+			}
+		}
+		escreva(" Número de pessoas à favor: ", numAFavor)
+		escreva("\n Número de pessoas contra: ", numContra)
+		se(numAFavor > numContra){
+			escreva("\n\n --- TERÁ GREVE --- \n")
+		} senao se(numAFavor < numContra){
+			escreva("\n\n --- NÃO HAVERÁ GREVE/~/ --- \n")
+		} senao{
+			escreva("\n\n --- EMPATOU, e agora? --- \n")
+		}
+	}
+}
